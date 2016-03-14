@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     private Toolbar toolbar;
     private FragmentDrawer drawerFragment;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

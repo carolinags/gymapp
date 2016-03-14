@@ -6,8 +6,12 @@
     android:orientation="vertical"
     tools:context="info.androidhive.materialdesign.activity.HomeFragment">
 
+    <android.support.v7.widget.RecyclerView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/rv"
+        >
 
-    <include
-        layout="@layout/card_view" />
+    </android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>
