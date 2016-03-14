@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * Created by zappts on 3/14/16.
  */
-public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.PersonViewHolder>{
+public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.PersonViewHolder> {
 
     public static class PersonViewHolder extends RecyclerView.ViewHolder {
 
@@ -27,7 +27,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
 
         PersonViewHolder(View itemView) {
             super(itemView);
-            cv = (CardView)itemView.findViewById(R.id.cv);
+            cv = (CardView)itemView.findViewById(R.id.card);
             personName = (TextView)itemView.findViewById(R.id.person_name);
             personAge = (TextView)itemView.findViewById(R.id.person_age);
             personPhoto = (ImageView)itemView.findViewById(R.id.person_photo);
@@ -54,14 +54,14 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
 
     @Override
     public void onBindViewHolder(PersonViewHolder personViewHolder, int i) {
-        Person person = persons.get(i);
-        personViewHolder.personName.setText(person.getName());
-        personViewHolder.personAge.setText(person.getAge());
-        personViewHolder.personPhoto.setImageResource(person.getPhotoId());
+        personViewHolder.personName.setText(persons.get(i).name);
+        personViewHolder.personAge.setText(persons.get(i).age);
+        personViewHolder.personPhoto.setImageResource(persons.get(i).photoId);
     }
 
     @Override
     public int getItemCount() {
+
         return persons.size();
     }
 }
